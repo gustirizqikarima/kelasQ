@@ -59,6 +59,25 @@ void tampilkanData() {
     cin.get();
 }
 
+void perbaikanData(int p) {
+    system("cls");
+    if (p >= 0 && p <= pos) {
+        cout << "Perbaiki data mahasiswa ke-" << (p + 1) << ":\n";
+        cin.ignore();
+        cout << "Masukkan Nama baru: ";
+        getline(cin, sikc[p].nama);
+        cout << "Masukkan Alamat baru: ";
+        getline(cin, sikc[p].alamat);
+        cout << "Masukkan IPK baru: ";
+        cin >> sikc[p].ipk;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "\nData mahasiswa berhasil diperbaiki!\n";
+    } else {
+        cout << "Indeks mahasiswa tidak valid!\n";
+    }
+    cin.get();
+}
+
 void tampilkanData(int p){
 cout << sikc[p].nim<<" , "<< sikc[p].nama<<" , "<< sikc[p].alamat<<" , "<<
 sikc[p].ipk<<endl;
