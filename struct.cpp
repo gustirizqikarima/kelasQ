@@ -39,3 +39,7 @@ cin >> sikc[pos].ipk;
 cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 
+void tampilkanData(int p){
+cout << sikc[p].nim<<" , "<< sikc[p].nama<<" , "<< sikc[p].alamat<<" , "<<
+sikc[p].ipk<<endl;
+}
