@@ -24,19 +24,22 @@ cout<<"Masukan angka :";
 mahasiswa sikc[30];
 int pos=-1;
 
-void masukanData(){
-pos++;
-system("cls");
-fflush(stdin);
-cout << "Masukkan NIM: ";
-getline (cin, sikc[pos].nim);
-cout << "Masukkan Nama: ";
-getline (cin, sikc[pos].nama);
-cout << "Masukkan Alamat: ";
-getline (cin, sikc[pos].alamat);
-cout << "Masukkan IPK: ";
-cin >> sikc[pos].ipk;
-cin.ignore(numeric_limits<streamsize>::max(), '\n');
+void masukanData() {
+    pos++;
+    system("cls");
+    cout << "Masukkan data mahasiswa ke-" << (pos + 1) << ":" << endl;
+    cin.ignore();
+    cout << "Masukkan NIM: ";
+    getline(cin, sikc[pos].nim);
+    cout << "Masukkan Nama: ";
+    getline(cin, sikc[pos].nama);
+    cout << "Masukkan Alamat: ";
+    getline(cin, sikc[pos].alamat);
+    cout << "Masukkan IPK: ";
+    cin >> sikc[pos].ipk;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "\nData mahasiswa berhasil ditambahkan!\n";
+    cin.get();
 }
 
 void tampilkanData(int p){
