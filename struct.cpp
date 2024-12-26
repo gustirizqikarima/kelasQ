@@ -42,6 +42,23 @@ void masukanData() {
     cin.get();
 }
 
+void tampilkanData() {
+    system("cls");
+    if (pos >= 0) {
+        cout << "Menampilkan Data Mahasiswa SIKC\n" << endl;
+        for (int i = 0; i <= pos; i++) {
+            cout << (i + 1) << ". NIM: " << sikc[i].nim
+                 << "\n   Nama: " << sikc[i].nama
+                 << "\n   Alamat: " << sikc[i].alamat
+                 << "\n   IPK: " << sikc[i].ipk << "\n";
+            cout << "-----------------------------------\n";
+        }
+    } else {
+        cout << "Belum ada data mahasiswa yang dimasukkan.\n";
+    }
+    cin.get();
+}
+
 void tampilkanData(int p){
 cout << sikc[p].nim<<" , "<< sikc[p].nama<<" , "<< sikc[p].alamat<<" , "<<
 sikc[p].ipk<<endl;
