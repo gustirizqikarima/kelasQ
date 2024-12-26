@@ -12,7 +12,7 @@ float ipk;
 
 void dMenu(){
 system("cls");
-cout<<"Aplikasi Mahasiswa"<<"\n";       
+cout<<"Aplikasi Mahasiswa SIKC-3B"<<"\n";       
 cout<<"1. Masukkan data mahasiswa"<<"\n";            
 cout<<"2. Tampilkan data mahasiswa"<<"\n";            
 cout<<"3. Perbaiki data mahasiswa"<<"\n";           
@@ -27,7 +27,7 @@ int pos=-1;
 void masukanData() {
     pos++;
     system("cls");
-    cout << "Masukkan data mahasiswa ke-" << (pos + 1) << ":" << endl;
+    cout << "Masukkan data mahasiswa SIKC-3B ke-" << (pos + 1) << ":" << endl;
     cin.ignore();
     cout << "Masukkan NIM: ";
     getline(cin, sikc[pos].nim);
@@ -62,7 +62,7 @@ void tampilkanData() {
 void perbaikanData(int p) {
     system("cls");
     if (p >= 0 && p <= pos) {
-        cout << "Perbaiki data mahasiswa ke-" << (p + 1) << ":\n";
+        cout << "Perbaiki data mahasiswa SIKC-3B ke-" << (p + 1) << ":\n";
         cin.ignore();
         cout << "Masukkan Nama baru: ";
         getline(cin, sikc[p].nama);
@@ -120,7 +120,7 @@ int main() {
                 if (ubahdt >= 1 && ubahdt <= pos + 1) {
                     perbaikanData(ubahdt - 1);
                 } else {
-                    cout << "\nNomor mahasiswa tidak valid!\n";
+                    cout << "\nNomor mahasiswa SIKC-3B tidak valid!\n";
                     cin.get();
                 }
                 break;
@@ -133,7 +133,7 @@ int main() {
                 if (hapusdt >= 1 && hapusdt <= pos + 1) {
                     hapusDataM(hapusdt - 1);
                 } else {
-                    cout << "\nNomor mahasiswa tidak valid!\n";
+                    cout << "\nNomor mahasiswa SIKC-3B tidak valid!\n";
                     cin.get();
                 }
                 break;
