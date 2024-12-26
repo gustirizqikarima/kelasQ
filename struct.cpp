@@ -78,7 +78,15 @@ void perbaikanData(int p) {
     cin.get();
 }
 
-void tampilkanData(int p){
-cout << sikc[p].nim<<" , "<< sikc[p].nama<<" , "<< sikc[p].alamat<<" , "<<
-sikc[p].ipk<<endl;
+void hapusDataM(int p) {
+    if (p >= 0 && p <= pos) {
+        for (int i = p; i < pos; i++) {
+            sikc[i] = sikc[i + 1];
+        }
+        pos--;
+        cout << "\nData mahasiswa berhasil dihapus!\n";
+    } else {
+        cout << "\nIndeks mahasiswa tidak valid!\n";
+    }
+    cin.get();
 }
